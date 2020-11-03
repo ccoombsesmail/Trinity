@@ -1,0 +1,11 @@
+main {
+  height: 800vh;
+  background-color: rgb(23,23,23);
+  z-index: 0;
+
+}
+
+.headerAnimateWrapper {
+  position: relative;
+  z-index: 99999;
+}

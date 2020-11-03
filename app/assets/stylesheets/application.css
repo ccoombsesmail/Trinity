@@ -13,3 +13,24 @@
  *= require_tree .
  *= require_self
  */
+
+
+
+ header, body, h1, h2, h3, h4, h5, ul, li, hr {
+   margin: 0;
+   padding: 0;
+ }
+
+ body {
+   overflow-x: hidden;
+   overflow-y: scroll;
+   z-index: -1;
+ }
+
+ html {
+   z-index: -1;
+ }
+
+ #root {
+   z-index: -1;
+ }

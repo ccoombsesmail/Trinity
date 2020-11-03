@@ -6,7 +6,9 @@
     "@babel/preset-env": "^7.12.1",
     "@babel/preset-react": "^7.12.1",
     "babel-loader": "^8.1.0",
+    "lodash": "^4.17.20",
     "react": "^17.0.1",
+    "react-animated-css": "^1.2.1",
     "react-dom": "^17.0.1",
     "react-redux": "^7.2.1",
     "react-router-dom": "^5.2.0",
@@ -22,9 +24,14 @@
     "test": "test"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "webpack": "webpack --mode=development --watch"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "css-loader": "^5.0.0",
+    "style-loader": "^2.0.0"
+  }
 }
