@@ -4,7 +4,10 @@ import styles from './Header.module.css'
 const Header = () => {
   return (
     <header >
-      <img src="https://i.ibb.co/h7mpGR4/trinity.png" alt="" />
+      <div className={styles.left}>
+        <img src="https://i.ibb.co/h7mpGR4/trinity.png" alt="" />
+        <h1>Trinity 3 In 1</h1>
+      </div>
       <ul className={styles.navWrapper}>
         <li>
           Home

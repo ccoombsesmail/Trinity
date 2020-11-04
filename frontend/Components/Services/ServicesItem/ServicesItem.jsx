@@ -5,12 +5,11 @@ import { Animated } from 'react-animated-css'
 
 import { throttle } from 'lodash'
 
-const ServicesItem = ({itemId}) => {
+const ServicesItem = ({ itemId, picLeft, imgSrc }) => {
   const [isVisible, setIsVisible] = useState(false)
 
   const scrollFunction = () => {
     const elem = document.getElementById(itemId)
-    console.log(isInViewport(elem))
     if (isInViewport(elem, 200)) {
       setIsVisible(true)
     } else {
@@ -23,19 +22,41 @@ const ServicesItem = ({itemId}) => {
     window.addEventListener("scroll", throttle(scrollFunction, 500))
   }, [])
 
+  const classes = picLeft ? [[styles.imgLeft], [styles.pLeft], [styles.h1Left]] : [[styles.imgRight], [styles.pRight], [styles.h1Right]]
+  console.log(classes)
   return (
     <div id={itemId} className={styles.itemWrapper}>
-      <Animated animationIn="fadeIn" animationOut="fadeOut" isVisible={isVisible}>
-        <img src="/offices.jpg" alt="" />
-      </Animated>
-      <Animated animationIn="fadeIn" animationOut="fadeOut" isVisible={isVisible}>
-        <h1>Installation</h1>
-      </Animated>
+      {
+        picLeft ? (
+            <>
+              <Animated animationIn="fadeIn" animationOut="fadeOut" isVisible={isVisible}>
+              <img className={classes[0].join(' ')} src={imgSrc} alt="" />
+              </Animated>
 
-      <Animated animationIn="fadeIn" animationOut="fadeOut" isVisible={isVisible}>
-        <p> This is some text which is just a placeholder idk what to type so I am just typing random stuff. LALALALA today is a day that is not the same day as yesterday </p>
-      </Animated>
+              <Animated animationIn="fadeIn" animationOut="fadeOut" isVisible={isVisible}>
+              <h1 className={classes[2].join(' ')}>Installation</h1>
+              </Animated>
 
+              <Animated animationIn="fadeIn" animationOut="fadeOut" isVisible={isVisible}>
+              <p className={classes[1].join(' ')}> This is some text which is just a placeholder idk what to type so I am just typing random stuff. LALALALA today is a day that is not the same day as yesterday </p>
+              </Animated>
+            </>
+        ) : (
+            <>
+              <Animated animationIn="fadeIn" animationOut="fadeOut" isVisible={isVisible}>
+                <p className={classes[1]}> This is some text which is just a placeholder idk what to type so I am just typing random stuff. LALALALA today is a day that is not the same day as yesterday </p>
+              </Animated>
+
+              <Animated animationIn="fadeIn" animationOut="fadeOut" isVisible={isVisible}>
+                <h1 className={classes[2]}>Moving</h1>
+              </Animated>
+
+              <Animated animationIn="fadeIn" animationOut="fadeOut" isVisible={isVisible}>
+                <img className={classes[0]} src={imgSrc} alt="" />
+              </Animated>
+            </>
+        )
+      }
     </div>
   )
 }
