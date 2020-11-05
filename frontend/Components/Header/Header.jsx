@@ -3,26 +3,26 @@ import styles from './Header.module.css'
 
 const Header = () => {
   return (
-    <header >
+    <header id="home">
       <div className={styles.left}>
         <img src="https://i.ibb.co/h7mpGR4/trinity.png" alt="" />
         <h1>Trinity 3 In 1</h1>
       </div>
       <ul className={styles.navWrapper}>
         <li>
-          Home
+          <a data-scroll href="#home">Home</a>
         </li>
         <li>
-          Services
+          <a data-scroll href="#services">Services</a>
         </li>
         <li>
-          About
+          <a data-scroll href="#about">About</a>
         </li>
         <li>
           Projects
         </li>
         <li>
-          Contact
+          <a data-scroll href="#contact">Contact</a>
         </li>
         <li>
           Get A Quote

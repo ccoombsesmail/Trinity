@@ -16,7 +16,7 @@
 
 
 
- header, body, h1, h2, h3, h4, h5, ul, li, hr {
+ header, body, h1, h2, h3, h4, h5, ul, li, hr, svg, path {
    margin: 0;
    padding: 0;
  }
@@ -33,4 +33,13 @@
 
  #root {
    z-index: -1;
+ }
+
+
+ a {
+   text-decoration: none;
+   color: white;
+   margin: 0;
+   padding: 0;
+
  }
