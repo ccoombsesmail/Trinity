@@ -1,7 +1,9 @@
 import React from 'react'
 import styles from './Header.module.css'
+import { Link, withRouter } from 'react-router-dom'
 
-const Header = () => {
+const Header = (props) => {
+  const { pathname } = props.location
   return (
     <header id="home">
       <div className={styles.left}>
@@ -10,19 +12,73 @@ const Header = () => {
       </div>
       <ul className={styles.navWrapper}>
         <li>
-          <a data-scroll href="#home">Home</a>
+          {
+            pathname === "/projects" ? (
+              <Link
+                to={{
+                  pathname: "/",
+                  state: { path: "/" }
+                }}
+              >
+                Home
+              </Link>
+            ): <a data-scroll href="#home">Home</a>
+          }
+          
         </li>
         <li>
-          <a data-scroll href="#services">Services</a>
+          {
+            pathname === "/projects" ? (
+              <Link
+                to={{
+                  pathname: "/",
+                  state: { path: "/services" }
+                }}
+              >
+              Services
+              </Link>
+            ) : <a data-scroll id="servicesAnchor" href="#services">Services</a>
+          }
+          
         </li>
         <li>
-          <a data-scroll href="#about">About</a>
+          {
+            pathname === "/projects" ? (
+              <Link
+                to={{
+                  pathname: "/",
+                  state: { path: "/about" }
+                }}
+              >
+              About
+              </Link>
+            ) : <a data-scroll id="aboutAnchor" href="#about">About</a>
+          }
         </li>
         <li>
+          {
+            pathname === "/projects" ? (
+              <Link
+                to={{
+                  pathname: "/",
+                  state: { path: "/contact" }
+                }}
+              >
+              Contact
+              </Link>
+            ) : <a id="contactAnchor" data-scroll href="#contact">Contact</a>
+          }
+          
+        </li>
+        <li>
+          <Link
+            to={{
+              pathname: "/projects",
+              state: { path: "/projects" }
+            }}
+          >
           Projects
-        </li>
-        <li>
-          <a data-scroll href="#contact">Contact</a>
+          </Link>
         </li>
         <li>
           Get A Quote
@@ -32,4 +88,4 @@ const Header = () => {
   )
 }
 
-export default Header
+export default withRouter(Header)

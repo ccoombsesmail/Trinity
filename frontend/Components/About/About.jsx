@@ -1,12 +1,14 @@
 import React from 'react'
 import styles from './About.module.css'
 import { Animated } from 'react-animated-css'
+import { withRouter } from 'react-router-dom'
 
-const About = () => {
+const About = (props) => {
+  console.log(props)
   return (
     <div className={styles.aboutWrapper}>
       <hr />
-      <Animated animationIn="slideInUp" animationInDelay={800}>
+      <Animated animationIn="fadeIn">
         <h1 id="about">About</h1>
       </Animated>
       <h2>
@@ -24,4 +26,4 @@ const About = () => {
   )
 }
 
-export default About
+export default withRouter(About)

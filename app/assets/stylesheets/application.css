@@ -16,7 +16,7 @@
 
 
 
- header, body, h1, h2, h3, h4, h5, ul, li, hr, svg, path {
+ header, body, h1, h2, h3, h4, h5, ul, li, hr, svg, path, nav {
    margin: 0;
    padding: 0;
  }
@@ -25,11 +25,28 @@
    overflow-x: hidden;
    overflow-y: scroll;
    z-index: -1;
+  scrollbar-color: var(--thumbBG) var(--scrollbarBG);
  }
 
  html {
-   z-index: -1;
- }
+  --scrollbarBG: black;
+  --thumbBG: #00D3B9;
+  z-index: -1;
+
+}
+body::-webkit-scrollbar {
+  width: 15px;
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--scrollbarBG);
+}
+body::-webkit-scrollbar-thumb {
+  background-color: var(--thumbBG) ;
+  border-radius: 6px;
+  border: 3px solid var(--scrollbarBG);
+}
+
 
  #root {
    z-index: -1;

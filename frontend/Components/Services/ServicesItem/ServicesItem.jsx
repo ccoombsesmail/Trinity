@@ -23,7 +23,6 @@ const ServicesItem = ({ itemId, picLeft, imgSrc }) => {
   }, [])
 
   const classes = picLeft ? [[styles.imgLeft], [styles.pLeft], [styles.h1Left]] : [[styles.imgRight], [styles.pRight], [styles.h1Right]]
-  console.log(classes)
   return (
     <div id={itemId} className={styles.itemWrapper}>
       {

@@ -1,15 +1,28 @@
 import React, { useEffect } from 'react'
 import styles from './IntroVideo.module.css'
+import { withRouter } from 'react-router-dom'
 
 const IntroVideo = (props) => {
   useEffect(() => {
-    document.getElementById("introVid").addEventListener("loadeddata", () => {
-      window.scroll({
-        top: 0,
-        left: 0,
-        behavior: 'smooth'
-      });
-    })
+    const state  = props.location.state
+    console.log(props.location.state)
+    if (state) {
+      let path = state.path
+      switch (path) {
+        case '/contact':
+          document.getElementById("contactAnchor").click()
+          break;
+        case '/about':
+          document.getElementById("aboutAnchor").click()
+          break;
+        case '/services':
+          document.getElementById("servicesAnchor").click()
+          break;
+        default:
+          break;
+      }
+     
+    }
   }, [])
   return (
     <video id="introVid" autoPlay loop={true} muted={true}>
@@ -20,4 +33,15 @@ const IntroVideo = (props) => {
 
 
 
-export default IntroVideo
+export default withRouter(IntroVideo)
+
+
+
+
+    // document.getElementById("introVid").addEventListener("loadeddata", () => {
+    //   window.scroll({
+    //     top: 0,
+    //     left: 0,
+    //     behavior: 'smooth'
+    //   });
+    // })

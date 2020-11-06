@@ -1,7 +1,8 @@
 main {
-  height: 800vh;
+  height: 500vh;
   background-color: rgb(23,23,23);
   z-index: 0;
+  box-sizing: border-box;
 
 }
 

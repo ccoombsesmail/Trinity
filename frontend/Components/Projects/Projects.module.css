@@ -1,0 +1,17 @@
+.projectsWrapper {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  padding-top: 200px;
+  align-items: center;
+}
+
+
+.projectWrapper {
+  width: 80vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+

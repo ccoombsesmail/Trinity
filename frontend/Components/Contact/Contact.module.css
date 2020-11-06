@@ -42,7 +42,7 @@
 
 .teamDescriptionWrapper {
   display: flex;
-  width: 55vw;
+  width: 60vw;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 60px;
@@ -63,7 +63,8 @@
 }
 
 .imgCard > img {
- width: 50%;
-border-radius: 5px;
+ width: 20vw;
+ border-radius: 5px;
+ margin-bottom: 10px;
 }
 

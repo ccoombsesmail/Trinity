@@ -6,7 +6,7 @@ import { Animated } from 'react-animated-css'
 const Services = () => {
   return (
     <div className={styles.servicesWrapper}>
-      <Animated animationIn="slideInUp" animationInDelay={800}>
+      <Animated animationIn="fadeIn" >
         <h1 id="services">Our Services</h1>
       </Animated>
       <hr/>

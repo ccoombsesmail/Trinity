@@ -1,11 +1,16 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import styles from './Contact.module.css'
 import { Animated } from 'react-animated-css'
 
 const Contact = () => {
+
+  useEffect(() => {
+
+  }, [])
+
   return (
     <div className={styles.contactWrapper}>
-      <Animated animationIn="slideInUp" animationInDelay={800}>
+      <Animated animationIn="fadeIn" >
         <h1 id="contact">Team</h1>
       </Animated>
       <section className={styles.teamDescriptionWrapper}>
