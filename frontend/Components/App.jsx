@@ -8,6 +8,7 @@ import About from './About/About'
 import Contact from './Contact/Contact'
 import { Switch, Route, HashRouter as Router } from 'react-router-dom'
 import Projects from './Projects/Projects'
+import ContactUs from './ContactUs/ContactUs'
 
 class App extends React.Component {
 
@@ -28,6 +29,7 @@ class App extends React.Component {
               <Services />
               <About />
               <Contact />
+              <ContactUs />
             </Route>
           </Switch>
         </Router>

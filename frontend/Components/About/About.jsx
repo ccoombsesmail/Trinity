@@ -4,7 +4,6 @@ import { Animated } from 'react-animated-css'
 import { withRouter } from 'react-router-dom'
 
 const About = (props) => {
-  console.log(props)
   return (
     <div className={styles.aboutWrapper}>
       <hr />

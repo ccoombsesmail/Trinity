@@ -5,7 +5,6 @@ import { withRouter } from 'react-router-dom'
 const IntroVideo = (props) => {
   useEffect(() => {
     const state  = props.location.state
-    console.log(props.location.state)
     if (state) {
       let path = state.path
       switch (path) {

@@ -85,6 +85,7 @@ GEM
     concurrent-ruby (1.1.7)
     crass (1.0.6)
     debug_inspector (0.0.3)
+    dotenv (2.7.6)
     erubi (1.9.0)
     execjs (2.7.0)
     ffi (1.13.1)
@@ -108,6 +109,9 @@ GEM
       nokogiri (>= 1.5.9)
     mail (2.7.1)
       mini_mime (>= 0.1.1)
+    mail_form (1.8.1)
+      actionmailer (>= 5.0)
+      activemodel (>= 5.0)
     marcel (0.3.3)
       mimemagic (~> 0.3.2)
     method_source (1.0.0)
@@ -217,9 +221,12 @@ DEPENDENCIES
   capybara (>= 2.15)
   chromedriver-helper
   coffee-rails (~> 4.2)
+  dotenv
   jbuilder (~> 2.5)
   jquery-rails
   listen (>= 3.0.5, < 3.2)
+  mail (~> 2.7)
+  mail_form
   pg (>= 0.18, < 2.0)
   pry-rails
   puma (~> 3.11)
