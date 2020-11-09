@@ -3,10 +3,17 @@
   flex-direction: column;
   align-items: center;
   background-color: white;
+  background-color: rgb(23,23,23);
   color: #00D3B9;
   font-family: 'Trispace', sans-serif;
   width: 100vw;
+  padding-bottom: 10vw;
+}
 
+.contactUsWrapper h1 {
+  margin-top: 80px;
+  margin-bottom: 30px;
+  font-size: 2vw;
 }
 
 .contactUsWrapper > form {
@@ -16,5 +23,63 @@
 }
 
 
+.nameEmailDiv {
+  display: flex;
+}
+
+.nameEmailDiv > label {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  font-size: 1.4vw;
+}
+
+.contactUsWrapper input {
+  border: 1px solid #00D3B9;
+  border-radius: 5px;
+  width: 15vw;
+  height: 1.8vw;
+}
+
+.contactUsWrapper input:focus {
+  outline: none;
+  border: 1px solid white
+}
 
 
+.subjectMessageDiv {
+  display: flex;
+}
+
+.subjectMessageDiv > label {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  font-size: 1.4vw;
+}
+
+
+.contactUsWrapper textarea {
+  border: 1px solid #00D3B9;
+  border-radius: 5px;
+  width: 15vw;
+  height: 3.8vw;
+}
+
+.contactUsWrapper textarea:focus {
+  outline: none;
+  border: 1px solid white
+}
+
+
+.contactUsWrapper button {
+  background-color: #00D3B9;
+  color: black;
+  font-family: 'Trispace', sans-serif;
+  border-radius: 5px;
+  border: none;
+  width: 10vw;
+  height: 2vw;
+  align-self: flex-start !important;
+  margin-left: 20px;
+}

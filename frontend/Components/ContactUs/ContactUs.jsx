@@ -52,7 +52,7 @@ const ContactUs = () => {
         <h1 id="contact">Contact Us</h1>
       </Animated>
       <form onSubmit={handleSubmit}>
-        <div>
+        <div className={styles.nameEmailDiv}>
           <label>
             Name
             <input value={name} onChange={update('name')} />
@@ -62,7 +62,7 @@ const ContactUs = () => {
             <input value={email} onChange={update('email')} />
           </label>
         </div>
-        <div>
+        <div className={styles.subjectMessageDiv}>
           <label>
             Subject
           <input value={subject} onChange={update('subject')} />
@@ -72,7 +72,7 @@ const ContactUs = () => {
           <textarea value={message} onChange={update('message')}>{message}</textarea>
           </label>
         </div>
-        <button type="submit" onClick={handleSubmit}>Send Message</button>
+        <button type="submit">Send Message</button>
       </form>
     </div>
   )
